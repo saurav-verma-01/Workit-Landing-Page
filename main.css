@@ -1,0 +1,33 @@
+header {
+  padding-block: 3.5rem;
+  background-color: var(--dark-purple);
+  color: var(--white);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header main {
+  width: 40rem;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+header main h1 {
+  margin-top: 4rem;
+}
+header main a {
+  margin-top: 2.3rem;
+}
+
+.hero-img {
+  width: 44rem;
+  height: 25.5rem;
+  margin-top: 3rem;
+}
