@@ -73,8 +73,8 @@ a {
   font-weight: 700;
   line-height: 1.778;
   letter-spacing: -0.01125rem;
-  width: 10rem;
-  height: 3rem;
+  width: 11.875rem;
+  height: 3.8125rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,10 +104,10 @@ a {
   height: 0.1875rem;
   background-color: var(--eucaplyptus);
   position: absolute;
-  bottom: 0rem;
+  bottom: 0.5rem;
   left: 0;
   width: 100%;
-  transform: scale(0.95);
+  transform: scale(0.8);
 }
 
 .btn.btn-secondary:is(:hover, :focus) {
@@ -116,9 +116,40 @@ a {
 
 /* reusable classes */
 .container {
-  width: 70rem;
+  padding-inline: 2.5rem;
+  width: 100%;
+  max-width: calc(70rem + 2.5rem);
   margin-inline: auto;
+  position: relative;
 }
+
+@media screen and (max-width: 960px) {
+  .container {
+    max-width: calc(43.125rem + 2.5rem);
+  }
+  .heading-primary {
+    font-size: 3.75rem;
+  }
+  .btn {
+    font-size: 1rem;
+    line-height: 2;
+    letter-spacing: -0.01rem;
+  }
+  .btn.btn-secondary::after {
+    transform: scale(0.7);
+    bottom: 0.55rem;
+  }
+}
+@media screen and (max-width: 620px) {
+  .container {
+    max-width: 100%;
+    padding-inline: 1rem;
+  }
+  .heading-primary {
+    font-size: 3.125rem;
+  }
+}
+
 .underline {
   position: relative;
 }
@@ -130,4 +161,9 @@ a {
   position: absolute;
   left: 0;
   bottom: 0.25rem;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 300vh;
 }
