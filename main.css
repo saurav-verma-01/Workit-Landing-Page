@@ -6,6 +6,9 @@
   padding-top: 3.6rem;
   padding-bottom: 5.375rem;
 }
+.header > * {
+  z-index: 5;
+}
 
 .header::after {
   content: "";
@@ -17,7 +20,7 @@
   left: 0;
   border-radius: 0% 0% 50% 50% / 0% 0% 100% 100%;
   scale: 2;
-  z-index: -5;
+  z-index: 1;
 }
 
 .navbar {
@@ -65,7 +68,64 @@
   background: url(./assets/images/bg-pattern-2.svg) no-repeat;
 }
 
-/* responsive Design */
+.features {
+  z-index: -3;
+  padding-block: 30rem 0rem;
+  background-color: var(--ghost-white);
+  color: var(--dark-purple);
+  position: relative;
+}
+.features > * {
+  z-index: 5;
+}
+.features::after {
+  background-color: var(--ghost-white);
+  content: "";
+  width: 100%;
+  height: 15rem;
+  z-index: 2;
+  position: absolute;
+  bottom: -2rem;
+  border-radius: 0 0 50% 50%/ 0 0 100% 100%;
+  transform: scale(2);
+}
+.number-box {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--dark-purple);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.667;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  font-family: fraunces;
+}
+
+.features-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.63rem;
+}
+.feature-box {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.feature-info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* ====================================   ========= Media Queries ===========
+======================================= */
 
 @media screen and (max-width: 960px) {
   .header {
@@ -92,6 +152,32 @@
     right: -7rem;
     top: 15rem;
   }
+
+  /* Features Section */
+  .features {
+    padding-block: 21rem 0rem;
+  }
+  .features::after {
+    height: 10rem;
+  }
+  .features-content {
+    flex-direction: column;
+  }
+  .feature-box {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .feature-info {
+    text-align: left;
+    gap: 1rem;
+  }
+  .number-box {
+    width: 3rem;
+    height: 3rem;
+  }
+  .features-content {
+    gap: 3rem;
+  }
 }
 @media screen and (max-width: 620px) {
   .header {
@@ -111,5 +197,21 @@
 
   .bg-pattern {
     display: none;
+  }
+  .features {
+    padding-block: 15.3rem 0rem;
+  }
+  .features::after {
+    height: 5rem;
+  }
+  .feature-box {
+    flex-direction: column;
+  }
+  .feature-info {
+    text-align: center;
+    gap: 1rem;
+  }
+  .features-content {
+    gap: 2.5rem;
   }
 }
