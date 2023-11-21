@@ -23,6 +23,12 @@ a {
   display: inline-block;
 }
 
+img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
 @font-face {
   font-family: fraunces;
   src: url(./assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf);
@@ -170,13 +176,21 @@ main {
     font-size: 1rem;
     line-height: 1.75;
   }
+  .heading-secondary {
+    font-size: 3rem;
+    line-height: 1.1667;
+  }
 }
 @media screen and (max-width: 620px) {
   .container {
     max-width: 100%;
-    padding-inline: 1rem;
+    padding-inline: 1rem 0;
   }
   .heading-primary {
     font-size: 3.125rem;
+  }
+  .heading-secondary {
+    font-size: 2rem;
+    line-height: 1.5;
   }
 }
